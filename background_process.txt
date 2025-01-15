@@ -1,0 +1,18 @@
+To run the bot in the background on your Plex server, you can follow these steps:
+
+1. Run the Bot on Plex Server in the Background:
+Since you're running the bot on a server, the best approach would be to use screen, tmux, or systemd to keep it running in the background even after you log out.
+
+Using screen:
+Install screen on your server if it's not installed:
+sudo apt-get install screen
+
+Start a new screen session:
+screen -S plex-bot
+
+Run your Python script as usual:
+python3 app.py
+
+Detach from the screen session by pressing Ctrl+A, then D.
+To reattach later, run:
+screen -r plex-bot
